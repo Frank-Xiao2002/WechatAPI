@@ -7,6 +7,10 @@ import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
 
+/**
+ * @deprecated This class is deprecated because spring provides RestTemplate
+ * to easily send RESTful requests.
+ */
 @Slf4j
 @Deprecated
 public class URL2TokenUtil {
