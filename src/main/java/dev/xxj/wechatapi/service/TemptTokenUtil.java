@@ -1,7 +1,6 @@
 package dev.xxj.wechatapi.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.web.client.RestTemplate;
 
 @Slf4j
@@ -11,7 +10,7 @@ public class TemptTokenUtil {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    public String getTokenInfo(String appId, String appSecret) throws JSONException {
+    public String getTokenInfo(String appId, String appSecret) {
         String uri = accessStr.replace("APPID", appId).replace("APPSECRET", appSecret);
         log.debug("uri = {}", uri);
         TemptTOKEN temptTOKEN;

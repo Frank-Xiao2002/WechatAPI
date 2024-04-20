@@ -10,6 +10,8 @@ import java.net.URLConnection;
 @Slf4j
 @Deprecated
 public class URL2TokenUtil {
+
+    @SuppressWarnings("unused")
     public static String getTemptURLToken(String strURL) {
         try {
             URL url = new URL(strURL);
@@ -21,7 +23,7 @@ public class URL2TokenUtil {
             while ((len = inputStream.read(bytes)) != -1) {
                 stringBuilder.append(new String(bytes, 0, len));
             }
-            log.debug("inputStream : {}", stringBuilder.toString());
+            log.debug("inputStream : {}", stringBuilder);
             String replaced = stringBuilder.toString().replace("}", ",");
             replaced += "\"createdTime\":" + System.currentTimeMillis() + "}";
             return replaced;
