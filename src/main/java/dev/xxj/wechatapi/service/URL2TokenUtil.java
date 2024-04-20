@@ -8,6 +8,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 @Slf4j
+@Deprecated
 public class URL2TokenUtil {
     public static String getTemptURLToken(String strURL) {
         try {
