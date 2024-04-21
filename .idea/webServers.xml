@@ -5,7 +5,7 @@
       <webServer id="fc9e2ab9-34c2-463d-a010-f29e60474c6a" name="huawei-ecs" url="http://120.46.182.90">
         <fileTransfer rootFolder="/home/frank/IdeaProjects" accessType="SFTP" host="120.46.182.90" port="22" sshConfigId="8826b4c6-b319-4721-ae62-384e5c0db2b4" sshConfig="frank@120.46.182.90:22 password">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" isUseRsync="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
