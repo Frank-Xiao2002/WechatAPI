@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 import java.net.URI;
 
 /**
- * Utility class to retrieve access token from WeChat server. The class replaces the APPID & APPSECRET
+ * Service class to retrieve access token from WeChat server. The class replaces the APPID & APPSECRET
  * with the actual appId and appSecret, and use {@link  org.springframework.web.client.RestTemplate} to
  * send the request.
  * <p>
@@ -20,7 +20,7 @@ import java.net.URI;
  */
 @Slf4j
 @Service
-public class AccessTokenUtil {
+public class AccessTokenService {
     /**
      * Static string template to retrieve access token from WeChat server.
      */

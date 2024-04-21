@@ -1,6 +1,6 @@
 package dev.xxj.wechatapi.entity;
 
-import dev.xxj.wechatapi.service.AccessTokenUtil;
+import dev.xxj.wechatapi.service.AccessTokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -54,7 +54,7 @@ public class AccessToken {
      */
     private static String updateToken() {
         updateTime = System.currentTimeMillis();
-        accessToken = AccessTokenUtil.getToken(appProperties.getId(), appProperties.getSecret())
+        accessToken = AccessTokenService.getToken(appProperties.getId(), appProperties.getSecret())
                 .access_token();
         return accessToken;
     }

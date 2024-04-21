@@ -24,6 +24,7 @@ public class WechatApiApplication {
         return args -> {
             log.info("access_token: {}", AccessToken.getAccessToken());
             log.info("app properties: {}", context.getBean(AppProperties.class));
+
         };
     }
 }

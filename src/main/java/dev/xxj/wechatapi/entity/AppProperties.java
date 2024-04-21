@@ -23,13 +23,13 @@ public class AppProperties {
     /**
      * App's development id
      */
-    @Value("${app.id}")
+    @Value("${dev.id}")
     private String id;
 
     /**
      * App's development secret
      */
-    @Value("${app.secret}")
+    @Value("${dev.secret}")
     private String secret;
 
 }

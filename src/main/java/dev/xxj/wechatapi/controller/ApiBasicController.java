@@ -1,6 +1,9 @@
 package dev.xxj.wechatapi.controller;
 
+import dev.xxj.wechatapi.service.MessageService;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.nio.charset.StandardCharsets;
@@ -12,8 +15,20 @@ import java.util.Arrays;
 @RestController
 @RequestMapping("/")
 @Slf4j
-public class AccessCheckController {
+public class ApiBasicController {
+    /**
+     * Constant string
+     */
     private static final String TOKEN = "xxj";
+    /**
+     * MessageService bean to send the website URI to the user.
+     */
+    private final MessageService messageService;
+
+    @Autowired
+    public ApiBasicController(MessageService messageService) {
+        this.messageService = messageService;
+    }
 
     /**
      * Check the access from WeChat server.
@@ -55,8 +70,16 @@ public class AccessCheckController {
      * @param body body of the request from WeChat Platform server
      */
     @PostMapping("")
-    public void answer(@RequestBody String body) {
+    public void answer(@RequestBody String body, HttpServletResponse response) {
         log.info("Received : \n" + "{}", body);
+        System.out.println("-------------------");
+        try {
+            String responsexml = messageService.sendWebURI(body);
+            response.setCharacterEncoding("utf-8");
+            response.getWriter().write(responsexml);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**
