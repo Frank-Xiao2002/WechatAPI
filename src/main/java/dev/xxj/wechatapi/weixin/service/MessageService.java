@@ -1,4 +1,4 @@
-package dev.xxj.wechatapi.service;
+package dev.xxj.wechatapi.weixin.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

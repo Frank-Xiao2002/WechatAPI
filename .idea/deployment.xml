@@ -5,7 +5,7 @@
       <paths name="huawei-ecs">
         <serverdata>
           <mappings>
-            <mapping deploy="/demo1" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/IdeaProjects/demo1" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

@@ -1,6 +1,7 @@
-package dev.xxj.wechatapi.service;
+package dev.xxj.wechatapi.weixin.service;
 
-import dev.xxj.wechatapi.entity.AccessTokenDTO;
+import dev.xxj.wechatapi.weixin.entity.AccessTokenDTO;
+import dev.xxj.wechatapi.weixin.entity.AppProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -16,7 +17,7 @@ import java.net.URI;
  * access token.
  *
  * @author Frank-Xiao2002
- * @see dev.xxj.wechatapi.entity.AppProperties
+ * @see AppProperties
  */
 @Slf4j
 @Service

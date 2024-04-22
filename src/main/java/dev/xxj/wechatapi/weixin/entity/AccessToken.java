@@ -1,6 +1,6 @@
-package dev.xxj.wechatapi.entity;
+package dev.xxj.wechatapi.weixin.entity;
 
-import dev.xxj.wechatapi.service.AccessTokenService;
+import dev.xxj.wechatapi.weixin.service.AccessTokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

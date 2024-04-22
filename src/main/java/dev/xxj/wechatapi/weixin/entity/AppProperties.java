@@ -1,4 +1,4 @@
-package dev.xxj.wechatapi.entity;
+package dev.xxj.wechatapi.weixin.entity;
 
 import lombok.Getter;
 import lombok.ToString;

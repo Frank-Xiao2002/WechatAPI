@@ -1,4 +1,4 @@
-package dev.xxj.wechatapi.entity.view;
+package dev.xxj.wechatapi.weixin.entity.view;
 
 import lombok.Data;
 

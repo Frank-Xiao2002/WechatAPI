@@ -1,4 +1,4 @@
-package dev.xxj.wechatapi.entity;
+package dev.xxj.wechatapi.weixin.entity;
 
 public record AccessTokenDTO(
         String access_token,

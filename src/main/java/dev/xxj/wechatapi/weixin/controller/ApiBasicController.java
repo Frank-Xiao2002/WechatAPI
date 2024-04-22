@@ -1,6 +1,6 @@
-package dev.xxj.wechatapi.controller;
+package dev.xxj.wechatapi.weixin.controller;
 
-import dev.xxj.wechatapi.service.MessageService;
+import dev.xxj.wechatapi.weixin.service.MessageService;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
